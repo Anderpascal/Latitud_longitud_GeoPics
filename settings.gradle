@@ -1,0 +1,2 @@
+rootProject.name='Latitud_longitud_GeoPics'
+include ':app'

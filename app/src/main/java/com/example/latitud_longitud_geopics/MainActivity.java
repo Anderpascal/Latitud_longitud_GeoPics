@@ -44,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
         ubicacion = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         Location loc = ubicacion.getLastKnownLocation(LocationManager.GPS_PROVIDER);
         if (loc != null) {
-            latitud.setText("Latitud: " + loc.getLatitude());
-            longitud.setText("Longitud: " + loc.getLongitude());
+//            latitud.setText("Latitud: " + loc.getLatitude());
+//            longitud.setText("Longitud: " + loc.getLongitude());
         }
 
     }
@@ -62,7 +62,10 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onLocationChanged(Location location) {
-            System.out.println("La dirección ha cambiado");
+            String lat = "Mi latitud es: " + location.getLatitude();
+            String lon = "Mi longitud es: " + location.getLongitude();
+            latitud.setText(lat);
+            longitud.setText(lon);
         }
 
         @Override

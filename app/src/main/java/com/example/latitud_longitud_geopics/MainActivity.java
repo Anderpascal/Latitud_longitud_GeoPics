@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onLocationChanged(Location location) {
-            System.out.println("La direccion ha cambiado");
+            System.out.println("La dirección ha cambiado");
         }
 
         @Override
